@@ -18,6 +18,7 @@ const EventDetailsPage = lazy(
   () => import('#pages/EventDetails/EventDetails.page'),
 );
 const MapPage = lazy(() => import('#pages/Map/Map.page'));
+const WalletPage = lazy(() => import('#pages/Wallet/Wallet.page'));
 const HomePage = lazy(() => import('#pages/Home/Home.page'));
 const NotFoundPage = lazy(() => import('#pages/NotFound/NotFound.page'));
 const Signature = lazy(() => import('#pages/Signature/Signature.page'));
@@ -121,6 +122,11 @@ export const authenticatedRoutes: (queryClient: QueryClient) => RouteObject = (
       path: '/map',
       element: <MapPage />,
       handle: { crumb: t('breadcrumbs.map.index') },
+    },
+    {
+      path: '/wallet',
+      element: <WalletPage />,
+      handle: { crumb: t('breadcrumbs.wallet.index') },
     },
     {
       path: '*',
